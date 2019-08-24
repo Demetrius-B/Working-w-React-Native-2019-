@@ -15,22 +15,20 @@ const ListScreen = () => {
 
     // Method #2 - Defining a key: use keyExtractor
     const friends = [
-        {name: 'Demetrius'},
-        {name: 'Ryan'},
-        {name: 'Brandon'},
-        {name: 'Tyler'},
-        {name: 'Gary'},
-        {name: 'Adue'},
+        {name: 'Demetrius', age:22},
+        {name: 'Ryan', age:21},
+        {name: 'Brandon', age:23},
+        {name: 'Tyler', age:25},
+        {name: 'Gary', age:19},
+        {name: 'Adue', age:27},
     ]
 
     return (
         <FlatList 
-            horizontal
-            showsHorizontalScrollIndicator={false}
             keyExtractor={(friend) => friend.name}
             data={friends} 
             renderItem={({item}) => {
-                return  <Text style={styles.textStyle}>{item.name}</Text>
+                return  <Text style={styles.textStyle}>{item.name} - Age {item.age}</Text>
             }} 
         />
     )
