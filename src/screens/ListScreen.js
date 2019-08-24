@@ -2,7 +2,7 @@ import React from 'react'
 import { Text, View, StyleSheet, FlatList } from 'react-native'
 
 const ListScreen = () => {
-    // Method #1 - Defining a key
+    // Method #1 - Defining a key: Add key property
     // const friends = [
     //     {name: 'Demetrius', key:'1'},
     //     {name: 'Ryan', key:'2'},
@@ -13,7 +13,7 @@ const ListScreen = () => {
     // ]
 
 
-    // Method #1 - Defining a key
+    // Method #2 - Defining a key: use keyExtractor
     const friends = [
         {name: 'Demetrius'},
         {name: 'Ryan'},
@@ -28,12 +28,16 @@ const ListScreen = () => {
             keyExtractor={(friend) => friend.name}
             data={friends} 
             renderItem={({item}) => {
-                return  <Text>{item.name}</Text>
+                return  <Text style={styles.textStyle}>{item.name}</Text>
             }} 
         />
     )
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+    textStyle:{
+        marginVertical: 50
+    }
+});
 
 export default ListScreen;
