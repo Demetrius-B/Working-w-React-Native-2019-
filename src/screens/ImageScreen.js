@@ -8,7 +8,6 @@ const ImageScreen = () => {
             <ImageDetail />
             <ImageDetail />
             <ImageDetail />
-            <ImageDetail />
         </View>
     ) 
 }
