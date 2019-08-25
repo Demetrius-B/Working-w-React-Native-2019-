@@ -6,14 +6,12 @@ const HomeScreen = (props) => {
     <View>
         <Text style={styles.text}>HomeScreen</Text>
         <Button 
-            onPress={() => props.navigation.navigate('List')}
+            onPress={() => props.navigation.navigate('Components')}
             title="Go to Components Demo" />
-
-        <TouchableOpacity onPress={() => props.navigation.navigate('Components')}> 
-            <Text>Go To List Demo</Text>
-            <Text>Go To List Demo</Text>
-            <Text>Go To List Demo</Text>
-        </TouchableOpacity>
+    
+        <Button 
+            onPress={() => props.navigation.navigate('List')}
+            title="Go to List Demo" />
     </View>
   )
 };
