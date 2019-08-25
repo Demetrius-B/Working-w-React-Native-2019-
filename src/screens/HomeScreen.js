@@ -5,7 +5,7 @@ const HomeScreen = () => {
   return (
     <View>
         <Text style={styles.text}>HomeScreen</Text>
-        <Button title="Open Components Demo" />
+        <Button title="Go to Components Demo" />
     </View>
   )
 };
