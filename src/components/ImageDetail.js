@@ -1,12 +1,14 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 
 const ImageDetail = () => {
     return (
         <View>
-            <Text>Image #1</Text>
+            <Text>Image #12</Text>
         </View>
     )
 }
+
+const styles = StyleSheet.create({})
 
 export default ImageDetail;
