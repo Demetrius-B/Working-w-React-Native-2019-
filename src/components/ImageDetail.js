@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 
-const ImageCard = () => {
+const ImageDetail = () => {
     return (
         <View>
             <Text>Image #1</Text>
@@ -9,4 +9,4 @@ const ImageCard = () => {
     )
 }
 
-export default ImageCard
+export default ImageDetail;

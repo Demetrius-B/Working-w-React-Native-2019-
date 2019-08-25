@@ -1,8 +1,15 @@
 import React from 'react'
 import { Text, View, StyleSheet } from 'react-native'
+import ImageDetail from './ImageScreen'
 
 const ImageScreen = () => {
-    return <View><Text>Need 3 Images</Text></View>
+    return (
+        <View>
+            <ImageDetail />
+            <ImageDetail />
+            <ImageDetail />
+        </View>
+    ) 
 }
 
 const styles = StyleSheet.create({
