@@ -1,16 +1,25 @@
-import React, { Component } from 'react'
-import { Text, View, StyleSheet, Button } from 'react-native'
+import React, {useState} from 'react'
+import {Text, View, StyleSheet, Button} from 'react-native'
 
 const CounterScreen = (props) => {
+    const [counter,
+        setCounter] = useState(0);
 
-    // broken code. todo: fix
-    let counter = 0;
-
-    return(
+    return (
         <View>
-            <Button title="Increase" onPress={() => {counter++; console.log(counter)}}></Button>
-            <Button title="Decrease" onPress={() => {counter--; console.log(counter)}}></Button>
-            <Text style={styles.textStyle}>Counter Count:</Text>
+            <Button
+                title="Increase"
+                onPress={() => {
+                // Don't do this!
+                // counter++;
+                setCounter(counter + 1);
+            }}></Button>
+            <Button
+                title="Decrease"
+                onPress={() => {
+                setCounter(counter - 1);
+            }}></Button>
+            <Text style={styles.textStyle}>Counter Count: {counter}</Text>
         </View>
     )
 }
@@ -22,4 +31,3 @@ const styles = StyleSheet.create({ // CSS in React Native
 })
 
 export default CounterScreen;
-
