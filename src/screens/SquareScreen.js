@@ -1,10 +1,13 @@
 import React, {useState} from 'react'
 import {View, Text, StyleSheet} from 'react-native'
+import ColorCounter from '../components/ColorCounter'
 
 const SquareScreen = () => {
     return (
         <View>
-            <Text>Square Screen</Text>
+            <ColorCounter color="red" />
+            <ColorCounter color="green" />
+            <ColorCounter color="blue" />
         </View>
     )
 }
