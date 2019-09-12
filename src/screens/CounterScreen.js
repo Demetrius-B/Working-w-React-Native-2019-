@@ -6,24 +6,27 @@ import {Text, View, StyleSheet, Button} from 'react-native'
 // state = { counter: number}
 // action = { type: 'change_counter', payload: 1 || -1}
 
+const reducer = (state, action) => {
+    if (action.type === 'change_counter') {
+        return state.counter + action.payload < 0 ? state : {...state, counter: state.counter + action.payload}
+    } else {
+        return state;
+    }
+}
 
-const CounterScreen = (props) => {
-    const [state, dispatch] = useReducer(reducer, { counter: 0});
+
+const CounterScreen = () => {
+    const [state, dispatch] = useReducer(reducer, { counter: 0 });
+    const { counter } = state;
 
     return (
         <View>
             <Button
                 title="Increase"
-                onPress={() => {
-                // Don't do this!
-                // counter++;
-                setCounter(counter + 1);
-            }}></Button>
+                onPress={() => dispatch({type:'change_counter', payload: 1})}></Button>
             <Button
                 title="Decrease"
-                onPress={() => {
-                setCounter(counter - 1);
-            }}></Button>
+                onPress={() => dispatch({type:'change_counter', payload: -1 * 1})}></Button>
             <Text style={styles.textStyle}>Counter Count: {counter}</Text>
         </View>
     )
