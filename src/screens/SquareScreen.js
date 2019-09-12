@@ -7,12 +7,12 @@ import ColorCounter from '../components/ColorCounter'
 const COLOR_INCREMENT = 15;
 const reducer = (state, action) => {
     // state === { red: number, green: number, blue: number} action: an object that
-    // tells me how to change my state object. action === { colorToChange: 'red ||
-    // 'blue' || 'green', amount: 15 || -15}
+    // tells me how to change my state object. 
+    // action === { type: 'change_red || 'change_blue' || 'change_green', payload: 15 || -15}
 
     switch (action.colorToChange) {
         case 'red':
-            // NEVER DO THIS: state.red = state.red - 15 Rebuild state object into new
+            // NEVER DO THIS: state.red = state.red - 15. Instead rebuild state object into new
             // object w/ changed value Make new object {Copy everything from old state,
             // Overwrite new red state prop} if(state.red + action.amount > 255 || state.red
             // + action.amount < 0) {     return state; // always return something, ERROR:
