@@ -1,19 +1,18 @@
 import React, {useReducer} from 'react'
 import {Text, View, StyleSheet, Button} from 'react-native'
 
-// Set increment
-// Create Reducer
+// Set increment - done
+// Create Reducer - done
 // state = { counter: number}
 // action = { type: 'change_counter', payload: 1 || -1}
 
 const reducer = (state, action) => {
     if (action.type === 'change_counter') {
-        return state.counter + action.payload < 0 ? state : {...state, counter: state.counter + action.payload}
+        return {...state, counter: state.counter + action.payload}
     } else {
         return state;
     }
 }
-
 
 const CounterScreen = () => {
     const [state, dispatch] = useReducer(reducer, { counter: 0 });
