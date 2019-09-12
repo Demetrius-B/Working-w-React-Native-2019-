@@ -1,5 +1,11 @@
-import React, {useState} from 'react'
+import React, {useReducer} from 'react'
 import {Text, View, StyleSheet, Button} from 'react-native'
+
+// Set increment
+// Create Reducer
+// state = { counter: number}
+// action = { type: 'change_counter', payload: 1 || -1}
+
 
 const CounterScreen = (props) => {
     const [counter,
