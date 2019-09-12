@@ -8,8 +8,7 @@ import {Text, View, StyleSheet, Button} from 'react-native'
 
 
 const CounterScreen = (props) => {
-    // const [counter,
-    //     setCounter] = useState(0);
+    const [state, dispatch] = useReducer(reducer, { counter: 0});
 
     return (
         <View>
