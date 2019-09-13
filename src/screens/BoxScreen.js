@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'green',
         height: 50,
         width: 50,
+        top: 50
     },
     textThreeStyle: {
         borderWidth: 1,
